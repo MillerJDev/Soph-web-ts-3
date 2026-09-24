@@ -35,6 +35,11 @@ nav a:hover {
   color: #D88C5A;
 }
 
+nav a[aria-current="page"] {
+  color: #D88C5A;
+  text-decoration: underline;
+}
+
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -100,4 +105,69 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+#diet-filter {
+  margin: 20px 0;
+  padding: 15px;
+  border: 2px solid #D88C5A;
+  background-color: #FFEFE0;
+}
+
+#filter-heading {
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+#filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button {
+  margin-top: 0;
+  background-color: #FFF8F0;
+  color: #6B3E26;
+  border: 2px solid #6B3E26;
+  padding: 9px 14px;
+}
+
+.filter-button:hover {
+  background-color: #D88C5A;
+  color: #FFF8F0;
+}
+
+.filter-button.active {
+  background-color: #6B3E26;
+  color: #FFF8F0;
+}
+
+#filter-status {
+  margin: 12px 0 0 0;
+  font-style: italic;
+}
+
+#clear-filters {
+  padding: 6px 12px;
+}
+
+.error-message {
+  display: block;
+  color: #B00020;
+  font-size: 1em;
+  margin-top: 4px;
+  min-height: 1.1em;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border: 2px solid #B00020;
+}
+    
+.form-success {
+  color: #2E7D32;
+  font-weight: bold;
+  margin-top: 10px;
 }
